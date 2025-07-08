@@ -174,6 +174,146 @@ body {
 
 
 .main-content {
-    background: grey;
+    background: rgb(230, 227, 227);
+    padding: 0px 20px 50px 0px;
     grid-area: main-content;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 3fr 1fr;
+    grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.project-title {
+    font-size: 18px;
+    color: rgb(95, 95, 95);
+    font-weight: 700;
+    margin-left: 15px;
+
+}
+
+.title {
+    font-size: 18px;
+    color: rgb(95, 95, 95);
+    font-weight: 700;
+}
+
+.projects {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.projects-grid {
+    flex: 1;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 15px;
+    padding: 0px 15px;
+}
+
+.card {
+    display: flex;
+}
+
+.card-decor {
+    background-color: var(--theme-color);
+    width: 2%;
+    height: 100%;
+}
+
+.card-content {
+    background: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.card-icons {
+    height: 25px;
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+    padding-left: 75%;
+    align-items: flex-end;
+}
+
+.card-icons img {
+    width: 25px;
+    height: auto;
+}
+
+.announcements {
+    grid-area: announcements;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.announcements-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+}
+
+.announcement {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.announcements-container p {
+    margin: 5px;
+}
+
+.announce-text {
+    font-size: 15px;
+}
+
+.announce-title {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.line-barrier {
+    background: grey;
+    height: 1px;
+    width: 100%;
+}
+
+
+
+.trending {
+    display: flex;
+    grid-area: trending;
+    flex-direction: column;
+}
+
+.trending-container {
+    flex: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.trending-user {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.trending-text {
+    padding-left: 15px;
+}
+
+.trending-text p {
+    margin: 0;
 }
